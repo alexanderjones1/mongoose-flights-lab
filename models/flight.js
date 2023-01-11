@@ -6,7 +6,10 @@ const flightSchema = new Schema({
   airline: String,
   airport: String,
   flightNo: Number,
-  departs: Date,
+  departs: {
+    type: Date,
+    // default: Date.today(),
+}
 }, {
   timestamps: true
 })
