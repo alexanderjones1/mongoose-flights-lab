@@ -8,9 +8,11 @@ router.get('/', flightsCtrl.index)
 // GET /flights/new
 router.get('/new', flightsCtrl.new)
 router.get('/:id', flightsCtrl.show)
+router.get('/:id/edit', flightsCtrl.edit)
 // POST /movies
 router.post('/', flightsCtrl.create)
 router.delete('/:id', flightsCtrl.delete)
+router.put('/:id/', flightsCtrl.update)
 
 export {
   router
