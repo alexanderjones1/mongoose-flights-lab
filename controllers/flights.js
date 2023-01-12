@@ -2,7 +2,7 @@ import { Flight } from "../models/flight.js"
 
 function newFlight(req, res) {
   res.render('flights/new', {
-    title: 'Add Flight',
+    title: 'ADD Flight',
   })
 }
 
@@ -21,7 +21,7 @@ function index(req, res) {
   Flight.find({})
   .then(flights => {
     res.render('flights/index', {
-      title: "All flights",
+      title: "ALL Flights",
       flights,
     })
   })
