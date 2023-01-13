@@ -41,6 +41,18 @@
       <h3>No ticket has been purchased yet.</h3>
     <% } %>
   </section>
+
+  <form 
+  action="/flights/<%= flight._id %>/meals" 
+  method="POST">
+    <select name="mealId">
+      <% mealsNotOnMenu.forEach(meal => { %>
+        <option value="<%= meal._id %>"><%= meal.name %></option>
+      <% }) %>
+    </select>
+    <button type="submit">Add Meal</button>
+  </form>
+
   <h2>Ticket</h2>
   <form
     id="add-ticket-form" 
