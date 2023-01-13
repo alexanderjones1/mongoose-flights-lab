@@ -39,6 +39,13 @@
       <h3>No ticket has been purchased yet.</h3>
     <% } %>
   </section>
+  <ul>
+    <li>
+      <% flight.meals.forEach(function(meal) { %>
+        <%= meal.name %> <br>
+      <% }) %>
+    </li>
+  </ul>
 
   <form 
   action="/flights/<%= flight._id %>/meals" 
